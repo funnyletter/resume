@@ -1,0 +1,188 @@
+\documentclass[]{resume-openfont}
+
+\pagestyle{fancy}
+\resetHeaderAndFooter
+
+%--------------------------------------------------------------
+% Convenience command - make it easy to fill template
+
+% Create job position command. Parameters: company, position, location, when
+\newcommand{\resumeHeading}[4]
+{\runsubsection{{#1}}
+    \newline
+    \descript{#2 | #3}
+    \hfill
+    \location{#4}
+    \fakeNewLine}
+
+% Create education heading. Parameters: Name, degree, location, when
+\newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 #4}
+\descript{#2}\fakeNewLine}
+
+% Create project heading. Parameters: Name, link, Tech stack
+\newcommand{\projectHeading}[3]{\Project{#1}{#2}
+\descript{#3}}
+
+\newcommand{\projectHeadingWithDate}[4]{\Project{#1}{#2}
+\descript{#3 | #4}}
+
+% Parameters: courses
+\newcommand{\courseWork}[1]{\textbf{Coursework:} #1}
+
+% Parameters: courses
+\newcommand{\teacherAssistant}[1]{\textbf{Teacher Assistant (TA):} #1}
+ 
+%--------------------------------------------------------------
+\begin{document}
+
+%--------------------------------------------------------------
+%     Profile
+%--------------------------------------------------------------
+\newcommand{\yourName}{Rachel Schirra}
+% How you want it to show up on the resume
+\newcommand{\yourWebsite}{website.com}
+% vs how you want it to show up. If it's the same you can just replace "\yourWebsiteLink" with "yourWebsite"
+\newcommand{\yourEmail}{rachel@onmail.com}
+\newcommand{\yourPhone}{909 262 4815 }
+\newcommand{\githubUserName}{funnyLetter}
+\newcommand{\linkedInUserName}{rachelSchirra}
+
+% An alternate profile section 
+% \alignProfileTable
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%     \ralewayBold{\href{\yourWebsiteLink}{\Large \yourName}} & 
+%     Email : \href{mailto:\yourEmail}{\yourEmail}
+%     \\
+%     \href{https://github.com/\githubUserName}{GitHub://\githubUserName} & 
+%     Mobile : \yourPhone
+%     \\
+%     \href{https://www.linkedin.com/in/\linkedInUserName}{LinkedIn://\linkedInUserName} & Website : \href{\yourWebsiteLink}{\yourWebsite}
+%     \\
+% \end{tabular*}
+
+\begin{center}
+    \Huge \scshape \latoRegular{\yourName} \\ \vspace{5pt}
+    \small \href{mailto:\yourEmail}{{\yourEmail}}  $|$  \yourPhone $|$ 
+    \href{https://www.linkedin.com/in/\linkedInUserName}{{linkedIn/\linkedInUserName}} $|$
+    \href{https://github.com/\githubUserName}{{github/\githubUserName}} 
+    % $|$ \href{\yourWebsiteLink}{\underline{\yourWebsite}}
+
+\end{center}
+
+%--------------------------------------------------------------
+%     Experience
+%--------------------------------------------------------------
+\section{Experience}
+\vspace{3pt}
+
+\resumeHeading{PitchBook}{Software Development Engineer}{Seattle, WA}{Aug 2022-Present}
+\begin{bullets}
+        \item Rewrote lead stockpile routing pipeline to move business logic from code to configuration files, reduce failures, and speed up troubleshooting. Brought unit test coverage from 0\% to 83\%.
+        \item Collaborated on modifications to inbound lead routing to account for the creation of a new sales role with custom routing criteria.
+        \item Responsible for maintenance and troubleshooting of inbound Customer Success and Sales lead routing pipelines.
+        \item Outspoken advocate for best practices in Marketing Automation data pipeline development.
+\end{bullets}
+\sectionsep
+\vspace{3mm}
+
+\resumeHeading{Defined.ai}{Solutions Developer}{Seattle, WA}{Aug 2020-July 2022}
+\begin{bullets}
+        \item Developed automation for quality control of user data and spam detection in Python, reducing time expended on quality checking by 90\%. These improvements made it possible to increase work for a major client by 5x.
+        \item Identified a gap in spam prevention practices, researched solutions, and developed a prototype automated solution to present to leadership, enabling the elimination of a source of low-quality data without additional human intervention.
+        \item Chosen to present data quality management practices to a potential client, resulting in a successful contract.
+\end{bullets}
+\sectionsep
+\vspace{3mm}
+
+\resumeHeading{Nuance Communications}{Customer Engagement Strategist (Chatbot Design and Optimization)}{Seattle, WA}{Oct 2017 - August 2020}
+\begin{bullets}
+        \item {Designed and implemented prototype data-enabled chatbot conversation flows using data from client APIs. Studied API documentation and past customer interactions and determined how to use client APIs to best meet customer needs. This effort was instrumental in retaining a major client account.}
+        \item {Became the go-to staff member for internal design tools, regularly advising coworkers on chatbot design. Recognized for expertise in complex dialog designs, and asked to audit colleagues' designs to ensure adherence to best practices.}
+        \item {Created Python scripts to automate large-scale virtual assistant content changes and expedite analysis tasks, reducing time to launch changes by over 95\%.}
+\end{bullets}
+\sectionsep
+\vspace{3mm}
+
+\resumeHeading
+    {Appen}
+    {Data Analyst}
+    {Bothell, WA}
+    {April 2016 - Dec 2016}
+\begin{bullets}
+        \item {Developed automated reporting using R, ggplot, and shiny, allowing project managers to generate reports on demand.}
+        \item {Conducted analysis to identify ways to improve project performance, including development of visualizations and proposals presented to clients in quarterly business reviews.}
+        \item {Created Python scripts to replace complex Excel macros and pivot tables, reducing time necessary to produce reports from 4-5 hours to 30-60 minutes.}
+\end{bullets}
+\sectionsep
+\vspace{3mm}
+
+\resumeHeading
+    {Amazon}
+    {Speech Business Analyst}
+    {Seattle, WA}
+    {Sept 2013 - Dec 2015}
+      \begin{bullets}
+        \item {Developed fast SQL-based metrics reporting solutions running on Amazon Redshift to reduce or eliminate reliance on legacy scripts running on an unreliable cluster.}
+        \item {Performed weekly deep-dive analyses on Amazon Echo speech recognition performance to identify sources of error negatively affecting customer experience.}
+        \item {Recognized for clear writing and communication skills, and selected to summarize and present findings from weekly Amazon Echo error analyses to the speech science team.}
+      \end{bullets}
+\sectionsep
+\vspace{3mm}
+
+%--------------------------------------------------------------
+%     Education
+%--------------------------------------------------------------
+\vspace{5pt}
+\section{Education}
+\vspace{5pt}
+% Put school first and degree second if your school is reputable
+\educationHeading{MA Linguistics}{University of Washington}{Seattle, WA}{}
+\vspace{8pt}
+% \teacherAssistant{World Wide Web Information Systems Development}
+% \courseWork{Data Structures and Algorithms; Operating Systems;  Computer Security; Software Testing; Advanced Networking; Big Data Analytics}
+
+\educationHeading{BA Linguistics}{Pitzer College}{Claremont, CA}{}
+\vspace{5pt}
+\sectionsep
+
+%--------------------------------------------------------------
+%     Projects
+%--------------------------------------------------------------
+% \section{Projects}
+
+%\projectHeading{Automated Spear-Phisher}{https://github.com/Aarif123456/Fb-Twitter-gui}{Python, PySpark, Selenium, Apache, NLP, Big Data}
+%A security research tool to send targeted spam messages on either Facebook or Twitter. The program analyzes the feed of its target to increase the effectiveness of the messages.\\
+%\sectionsep
+
+% Example using bullets and dates 
+% \projectHeadingWithDate{Hogwart\textquotesingle{}s Library Management System}{https://github.com/Aarif123456/hogwartslibrary}{PHP, JavaScript, HTML, CSS, MySQL}{Aug 2019}
+% \begin{bullets}
+    % \item A full-stack library management system, where users can manage books and holds on their accounts. Users can search the library\textquotesingle{}s catalogue, which has every book mentioned in the Harry Potter series. The system distinguishes between 4 users. For examples, librarians who can also check or return books on behalf of users.\\
+% \end{bullets}
+% \sectionsep
+  
+
+%--------------------------------------------------------------
+%     Skills
+%--------------------------------------------------------------
+\vspace{5pt}
+\section{Skills}
+\begin{skillList}
+    \singleItem{Python:}{pandas, pytest, mockito, numpy, simple\_salesforce}
+    \\
+    \singleItem{SQL:}{Snowflake, PostgreSQL, Microsoft SQL Server}
+    \\
+    \singleItem{Salesforce:}{SOQL, Salesforce Workbench}
+    \\
+    \singleItem{Tools:}{Git, WSL2, Airflow, Jira, Confluence, Excel, bash, Docker}
+\end{skillList}
+
+% A more concise alternate 
+% \begin{skillList}
+%     \doubleItem{Languages:}{Java, C++, Python, C\#, PHP, Prolog, Bash, C, Racket}%
+%     {Databases:}{SQL, MongoDB, Neo4j, DynamoDB}
+%     \\
+%     \doubleItem{Web Development:}{JavaScript, TypeScript, React, HTML/CSS}
+%     {Technology:}{Git, AWS, GCP, Azure, Docker, \LaTeX}%
+% \end{skillList}
+\end{document}
