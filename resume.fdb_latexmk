@@ -1,0 +1,22 @@
+# Fdb version 4
+["pdflatex"] 1762804519.03209 "/home/rachels/code/resume/resume.tex" "resume.pdf" "resume" 1762804519.10217 2
+  "/home/rachels/.TinyTeX/texmf-dist/tex/generic/babel/babel.sty" 1761181259 145885 784cdd1ebbc3dbacabd5ee30707617a3 ""
+  "/home/rachels/.TinyTeX/texmf-dist/tex/generic/babel/errbabel.def" 1761181259 10171 724d86725653227711a9b6779bc810fe ""
+  "/home/rachels/.TinyTeX/texmf-dist/tex/generic/babel/locale/en/babel-en.ini" 1661803479 3966 caeee5a9e5771d4446aa1ca9015ba1b2 ""
+  "/home/rachels/.TinyTeX/texmf-dist/tex/generic/babel/locale/en/babel-english.tex" 1752438283 374 a9c05f002d9437e6de45ac1cc23d56c2 ""
+  "/home/rachels/.TinyTeX/texmf-dist/tex/generic/babel/txtbabel.def" 1747250289 5231 82bb24bf20af7e4d760717f2cadb5170 ""
+  "/home/rachels/.TinyTeX/texmf-dist/tex/latex/base/article.cls" 1748806692 20144 b966087dda3b194755eb460d32e2ef75 ""
+  "/home/rachels/.TinyTeX/texmf-dist/tex/latex/base/size10.clo" 1748806692 8448 686612a86f0e04f41ea577f5ec7e83d8 ""
+  "/home/rachels/.TinyTeX/texmf-dist/web2c/texmf.cnf" 1749313668 42213 4e2ca030e8e2640502016e9e45868dcb ""
+  "/home/rachels/.TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1762745773 2235503 b75cab27e7ae827b436183ad9d45a7ba ""
+  "/home/rachels/.TinyTeX/texmf.cnf" 1762745744 637 edd806fb06a89761a6034e1968af9017 ""
+  "/home/rachels/code/resume/resume.tex" 1762804482.22524 6425 6e0a214b12f1267612bf42361e098b28 ""
+  "fancyhdr.sty" 0 -1 0 ""
+  "resume-openfont.cls" 1762804482.22524 4164 01acf6c3b28613630dfdfffd0a877831 ""
+  "resume.aux" 1762804511.02723 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "resume.tex" 1762804482.22524 6425 6e0a214b12f1267612bf42361e098b28 ""
+  (generated)
+  "resume.aux"
+  "resume.log"
+  "resume.pdf"
+  (rewritten before read)

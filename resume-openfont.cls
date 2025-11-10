@@ -10,7 +10,7 @@
 
 %--------------------------------------------------------------
 % Package Imports
-\RequirePackage[english]{babel}
+% \RequirePackage[english]{babel}  % Commented out due to compatibility issues
 % page setup 
 \RequirePackage{fancyhdr}
 % Set boundaries
