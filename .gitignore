@@ -1,0 +1,11 @@
+.sfdx
+*.sfdx
+.local
+.idea/
+.vscode/
+*.log
+.DS_Store
+resume-vars.sty
+*.tar.gz
+*.gz
+*.zip
