@@ -1,3 +1,3 @@
 Anonymized resume!
 
-Based on: https://github.com/Aarif123456/modern-deedy
+Medium Length Professional CV LaTeX Template from https://www.LaTeXTemplates.com

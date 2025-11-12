@@ -1,123 +1,140 @@
-\documentclass[]{resume-openfont}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 3.0 (December 17, 2022)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% Author:
+% Vel (vel@latextemplates.com)
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% License:
+% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\pagestyle{fancy}
-\resetHeaderAndFooter
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
 
-%--------------------------------------------------------------
-% Import vars
+\documentclass[
+	%a4paper, % Uncomment for A4 paper size (default is US letter)
+	11pt, % Default font size, can use 10pt, 11pt or 12pt
+]{resume} % Use the resume class
+
+\usepackage{ebgaramond} % Use the EB Garamond font
 \usepackage{resume-vars-anon}
+\usepackage{hyperref}
 
-% Create job position command. Parameters: company, position, location, when
-\newcommand{\resumeHeading}[4]
-{\runsubsection{{#1}}\\%
-    \descript{#2 | #3}%
-    \hfill%
-    \location{#4}%
-    \fakeNewLine}
+%------------------------------------------------
 
-% Create education heading. Parameters: Name, degree, location, when
-% Modified to place school name, location, and degree all on the same line, with the degree right-justified
-\newcommand{\educationHeading}[4]{\runsubsection{#1}\quad  \location{#3 #4}\hfill \descript{#2}\fakeNewLine}
+\name{\yourName} % Your name to appear at the top
 
-% Create project heading. Parameters: Name, link, Tech stack
-\newcommand{\projectHeading}[3]{\Project{#1}{#2}%
-\descript{#3}}
+% You can use the \address command up to 3 times for 3 different addresses or pieces of contact information
+% Any new lines (\\) you use in the \address commands will be converted to symbols, so each address will appear as a single line.
 
-\newcommand{\projectHeadingWithDate}[4]{\Project{#1}{#2}%
-\descript{#3 | #4}}
+\address{\yourLocation} % Main address
 
-% Parameters: courses
-\newcommand{\courseWork}[1]{\textbf{Coursework:} #1}
+\address{\yourPhone \\ \href{mailto:\yourEmail}{\yourEmail} \\ \href{\linkedinLink}{\yourLinkedin} \\ \href{\githubLink}{\yourGithub}} % Contact information
 
-% Parameters: courses
-\newcommand{\teacherAssistant}[1]{\textbf{Teaching Assistant (TA):} #1}
+%----------------------------------------------------------------------------------------
 
-%--------------------------------------------------------------
 \begin{document}
 
-%--------------------------------------------------------------
-%     Profile
-%--------------------------------------------------------------
 
-\begin{center}
-    \Huge \scshape \latoRegular{\yourName} \\ \vspace{5pt}
-    \small \href{mailto:\yourEmail}{{\yourEmail}}  $|$  \yourPhone $|$  
-    \href{\linkedinLink}\yourLinkedin \space  $|$  
-    \href{\githubLink}\yourGithub 
+%----------------------------------------------------------------------------------------
+%	SUMMARY SECTION
+%----------------------------------------------------------------------------------------
 
-\end{center}
+\begin{rSection}{Summary}
 
-%--------------------------------------------------------------
-%     Experience
-%--------------------------------------------------------------
-\section{Experience}
-\resumeHeading{PitchBook}{Software Development Engineer}{Seattle, WA}{Aug 2022-Present}
-\begin{bullets}
-        \item Spearheaded an initiative to improve codebase quality by ensuring over 80\% unit test coverage across all Python data pipelines, significantly enhancing code stability, reducing bugs, and accelerating future development cycles.
+	\textbf{Senior Backend Engineer} with 5+ years of experience specializing in Python and FastAPI to architect scalable, event-driven APIs and robust data pipelines (Kafka, Snowflake). Proven track record in achieving high unit test coverage and technical mentorship.
+
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Skills}
+
+	\begin{tabular}{@{} >{\bfseries}l @{\hspace{6ex}} l @{}}
+		Programming Languages & Python, SQL, R \\
+		Packages \& Frameworks & FastAPI, Flask, Pytest, Pandas, Numpy, simple\_salesforce \\
+		Protocols \& APIs & XML, JSON, REST \\
+		Databases \& Data Warehousing & Snowflake, MySQL, PostgreSQL, Microsoft SQL \\
+		Cloud \& Platforms & Kafka, AWS (S3, Lambda, Aurora, RDBS, Aurora), Salesforce (Apex, SOQL) \\
+		Tools \& Concepts & Git, Docker, Airflow, Data Pipelines, WSL2, Jira, Confluence, Bash, Linux \\
+	\end{tabular}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Experience}
+
+	\begin{rSubsection}{PitchBook}{Software Development Engineer}{Seattle, WA}{Aug 2022-Present}
+		\item Spearheaded an initiative to improve codebase quality by ensuring over 80\% unit test coverage across all Python data pipelines, significantly enhancing code stability, reducing bugs, and accelerating future development cycles.
         \item Architected and developed a Python/FastAPI-based API, callable from Salesforce, to streamline lead and company research processes; automated data transfer to Snowflake and real-time Salesforce record updates, enhancing data consistency and operational efficiency.
         \item Collaborated cross-functionally with research and sales operations teams to gather requirements and ensure the API's seamless integration and effectiveness within a new LeanData-driven sales lead routing system.
         \item Actively contributing to the architectural design and development of a new event-driven marketing automation codebase, designing a software layer for real-time data orchestration between Marketo and Salesforce using Kafka.
         \item Designed of a new PostgreSQL database schema for logging inbound marketing actions and developing robust data ingestion mechanisms.
-\end{bullets}
-\sectionsep
+	\end{rSubsection}
 
-\resumeHeading{Defined.ai}{Solutions Developer}{Seattle, WA}{Aug 2020-July 2022}
-\begin{bullets}
+	\begin{rSubsection}{Defined.ai}{Solutions Developer}{Seattle, WA}{Aug 2020-July 2022}
         \item Developed automation for quality control of user data and spam detection in Python, reducing time expended on quality checking by 90\%. These improvements made it possible to increase work for a major client by 5x.
         \item Identified a gap in spam prevention practices, researched solutions, and developed a prototype automated solution to present to leadership, enabling the elimination of a source of low-quality data without additional human intervention.
         \item Chosen to present data quality management practices to a potential client, resulting in a successful contract.
-\end{bullets}
-\sectionsep
+	\end{rSubsection}
 
-\resumeHeading{Nuance Communications}{Customer Engagement Strategist (Chatbot Design and Optimization)}{Seattle, WA}{Oct 2017 - August 2020}
-\begin{bullets}
+	\begin{rSubsection}{Nuance Communications}{Chatbot Design and Development}{Seattle, WA}{Oct 2017 - August 2020}
         \item Designed and implemented prototype data-enabled chatbot conversation flows using data from client APIs. Studied API documentation and past customer interactions and determined how to use client APIs to best meet customer needs. This effort was instrumental in retaining a major client account.
         \item Served as a subject matter expert for internal design tools, advising and mentoring coworkers on chatbot design and best practices.
         \item Created Python scripts to automate large-scale virtual assistant content changes and expedite analysis tasks, reducing time to launch changes by over 95\%.
-\end{bullets}
-\sectionsep
+	\end{rSubsection}
 
-\resumeHeading{Amazon}{Data and Process Analyst}{Seattle, WA}{September 2013 - December 2015}
-\begin{bullets}
-        \item Developed faster SQL equivalents to existing metrics-gathering scripts, and created Python scripts to automate large-scale data collection and analysis tasks using libraries such as **pandas**.
+	\begin{rSubsection}{Amazon}{Data and Process Analyst}{Seattle, WA}{September 2013 - December 2015}
+		\item Developed faster SQL equivalents to existing metrics-gathering scripts, and created Python scripts to automate large-scale data collection and analysis tasks using libraries such as **pandas**.
         \item Monitored and reported on weekly usage and accuracy metrics for speech applications, performing ad-hoc analyses on outlier data.
         \item Designed and launched three speech data collections in two countries, including a pilot collection gathering speech data from over 400 volunteer participants.
         \item Championed and implemented new processes for equipment inventory and storage, assisting in the development of process improvements for data collection methods.
-\end{bullets}
-\sectionsep
+	\end{rSubsection}
 
-%--------------------------------------------------------------
-%     Education
-%--------------------------------------------------------------
-\section{Education}
-\vspace{5pt}
-
-\educationHeading{University of Washington}{MA Linguistics}{Seattle, WA}{}
-\vspace{8pt}
-
-\educationHeading{Pitzer College}{BA Linguistics}{Claremont, CA}{}
-\vspace{5pt}
-\sectionsep
-  
-%--------------------------------------------------------------
-%     Skills
-%--------------------------------------------------------------
-\vspace{5pt}
-\section{Skills}
-\begin{skillList}
-    \singleItem{Programming Languages:}{Python (pandas, pytest, mockito, numpy, simple\_salesforce, FastAPI)}
-    \vspace{5pt}
-    \\
-    \singleItem{Databases/Data Warehousing:}{Snowflake, PostgreSQL, Microsoft SQL Server}
-    \vspace{5pt}
-    \\
-    \singleItem{Cloud/Platforms:}{AWS (S3, Secrets Manager, Aurora), Salesforce (SOQL, Salesforce Workbench), Kafka, Marketo}
-    \vspace{5pt}
-    \\
-    \singleItem{Tools/Concepts:}{Git, Docker, Airflow, Data Pipelines, WSL2, Jira, Confluence, Excel, bash}
-    \\
-\end{skillList}
+\end{rSection}
 
 
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+	
+	\textbf{University of Washington, Seattle} \hfill \textit{2012} \\ 
+	MA in Linguistics \\
+	Coursework in computational linguistics, statistics, and research methods
+
+	\textbf{Pitzer College, Claremont, CA} \hfill \textit{2005} \\
+	BA in Linguistics
+	
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	EXAMPLE SECTION
+%----------------------------------------------------------------------------------------
+
+%\begin{rSection}{Section Name}
+
+	%Section content\ldots
+
+%\end{rSection}
+
+%----------------------------------------------------------------------------------------
 
 \end{document}
